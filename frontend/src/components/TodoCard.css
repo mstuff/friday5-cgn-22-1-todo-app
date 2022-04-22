@@ -1,0 +1,18 @@
+
+.todo-card {
+
+    background-color: darkslategray;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 5%;
+
+
+}
+
+
+.card {
+    padding: 20px;
+
+}
