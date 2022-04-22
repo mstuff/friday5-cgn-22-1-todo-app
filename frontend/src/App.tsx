@@ -3,15 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import useTodos from "./hooks/useTodos";
 import OpenTodos from "./components/OpenTodos";
+import CreateTodo from "./components/CreateTodo";
 
 export default function App() {
 
-    const {todos} = useTodos();
+    const {todos, addTodo} = useTodos();
 
   return (
     <div className="App">
       <header className="App-header">
           <OpenTodos todos={todos}/>
+          <CreateTodo addTodo={addTodo}/>
 
       </header>
     </div>

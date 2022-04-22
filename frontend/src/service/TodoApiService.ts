@@ -8,7 +8,7 @@ export function getTodosByApi(){
         .catch(console.error)
 }
 
-export function postTodosByApi(todo: Todo){
+export function postTodosByApi(todo: Omit<Todo, "id">){
     return axios.post("api/todo", todo)
         .then(response => response.data)
         .catch(console.error)
