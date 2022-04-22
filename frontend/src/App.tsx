@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import useTodos from "./hooks/useTodos";
 import OpenTodos from "./components/OpenTodos";

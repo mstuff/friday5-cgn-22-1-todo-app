@@ -17,7 +17,7 @@ export default function CreateTodo({addTodo}: CreateTodoProps) {
         event.preventDefault();
 
         if (!newDescription) {
-            alert(`You need to write down what to do!`);
+            alert(`Type a description of what you want to do!`);
             return;
         }
 
