@@ -24,4 +24,5 @@ export default function useTodos(){
 
 
 // Weitere Möglichkeit, eine Eigenschaft wegzulassen: Omit<Todo, "id">
-// funktioniert hier nicht mit dem Todo [] im useState
+// funktioniert  nicht mit dem Todo [] im useState
+//  oder mit Rückgabe addTodo

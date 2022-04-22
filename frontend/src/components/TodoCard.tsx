@@ -11,7 +11,7 @@ export default function TodoCard({todo}: TodoCardProps) {
         <div className={"card"}>Discription: {todo.description}</div>
         <div className={"card"}>Status: {todo.status}</div>
         <div>
-        <button> Move </button>
+        <button className={"button-advance"}> Advance </button>
         </div>
     </div>
 

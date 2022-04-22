@@ -14,7 +14,6 @@ export default function App() {
       <header className="App-header">
           <OpenTodos todos={todos}/>
           <CreateTodo addTodo={addTodo}/>
-
       </header>
     </div>
   );
