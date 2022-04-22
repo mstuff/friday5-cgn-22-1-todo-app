@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Todo} from "../model/Todo";
 import {getTodosByApi} from "../service/TodoApiService";
-import {To} from "react-router-dom";
+
 
 
 export default function useTodos(){
@@ -21,3 +21,7 @@ export default function useTodos(){
 
 
 }
+
+
+// Weitere Möglichkeit, eine Eigenschaft wegzulassen: Omit<Todo, "id">
+// funktioniert hier nicht mit dem Todo [] im useState

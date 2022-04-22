@@ -1,7 +1,7 @@
 import {Todo} from "../model/Todo";
 import {FormEvent, useState} from "react";
 import {postTodosByApi} from "../service/TodoApiService";
-import TodoOverviewPage from "../pages/TodoOverviewPage";
+import "./CreateTodo.css"
 
 
 type CreateTodoProps = {
@@ -11,7 +11,7 @@ type CreateTodoProps = {
 export default function CreateTodo({addTodo}: CreateTodoProps) {
 
     const [newDescription, setNewDescription] = useState<string>("");
-    const [newStatus, setStatus] = useState<string>("OPEN");
+
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -32,12 +32,12 @@ export default function CreateTodo({addTodo}: CreateTodoProps) {
     }
 
 
-    return <div>
-        Add description
+    return <div className={"create-todo"}>
+
 
         <form onSubmit={handleSubmit}>
             <div>
-                <label> what needs to be done:
+                <label> What needs to be done?
                     <input
                         type={"text"}
                         value={newDescription}
@@ -47,7 +47,7 @@ export default function CreateTodo({addTodo}: CreateTodoProps) {
             </div>
             <div>
                 <input type={"submit"}
-                       value={"??"}
+                       value={"Add"}
                 />
             </div>
 
