@@ -12,8 +12,12 @@ type GalleryPageProps = {
 export default function TodoOverviewPage({todos, addTodo}: GalleryPageProps){
 
     return <div>
+        <div>
         <OpenTodos todos={todos}/>
+        </div>
+        <div>
         <CreateTodo addTodo={addTodo}/>
+    </div>
     </div>
 
 }
