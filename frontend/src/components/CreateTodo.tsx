@@ -17,7 +17,7 @@ export default function CreateTodo({addTodo}: CreateTodoProps) {
         event.preventDefault();
 
         if (!newDescription) {
-            alert(`You need to write down your todo!`);
+            alert(`You need to write down what to do!`);
             return;
         }
 
@@ -36,14 +36,16 @@ export default function CreateTodo({addTodo}: CreateTodoProps) {
 
 
         <form onSubmit={handleSubmit}>
+
+            <label> What needs to be done? </label>
             <div>
-                <label> What needs to be done?
+
                     <input
                         type={"text"}
                         value={newDescription}
                         onChange={(event => setNewDescription(event.target.value))}
                     />
-                </label>
+
             </div>
             <div>
                 <input type={"submit"}
