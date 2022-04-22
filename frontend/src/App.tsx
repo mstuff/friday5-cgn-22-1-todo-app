@@ -1,23 +1,29 @@
 import React from 'react';
 import './App.css';
 import useTodos from "./hooks/useTodos";
-import OpenTodos from "./components/OpenTodos";
-import CreateTodo from "./components/CreateTodo";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import TodoOverviewPage from "./pages/TodoOverviewPage";
+
 
 export default function App() {
 
     const {todos, addTodo} = useTodos();
 
-  return (
-    <div className="App">
-      <header className="App-header">
-          <OpenTodos todos={todos}/>
-          <CreateTodo addTodo={addTodo}/>
-      </header>
-    </div>
-  );
-}
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path={"/overview"}
+                        element={<TodoOverviewPage todos={todos} addTodo={addTodo}/>}/>
+                </Routes>
 
+            </BrowserRouter>
+
+
+        </div>
+    );
+}
 
 
 /*
