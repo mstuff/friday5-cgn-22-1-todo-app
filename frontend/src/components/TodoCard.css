@@ -1,12 +1,15 @@
 
 .todo-card {
 
-    background-color: darkslategray;
+    background-color: #89adaf;
 
     display: flex;
     flex-direction: column;
 
-    margin: 5%;
+    margin: 2% 5% 1% 5%;
+
+    height: 30%;
+    width: 25%;
 
 
 }
