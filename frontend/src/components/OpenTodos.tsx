@@ -8,6 +8,6 @@ type OpenTodosProps = {
 export default function OpenTodos({todos}:OpenTodosProps){
     return <div>
         {todos.map(todo => <TodoCard key={todo.id} todo={todo}/>)}
-    </div>
+    </div>;
 
 }
