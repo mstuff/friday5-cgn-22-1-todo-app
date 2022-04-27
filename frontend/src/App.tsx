@@ -3,6 +3,8 @@ import './App.css';
 import useTodos from "./hooks/useTodos";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import TodoOverviewPage from "./pages/TodoOverviewPage";
+import NavigationBar from "./components/NavigationBar";
+import Header from "./components/Header";
 
 
 export default function App() {
@@ -12,12 +14,18 @@ export default function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Routes>
-                    <Route
-                        path={"/overview"}
-                        element={<TodoOverviewPage todos={todos} addTodo={addTodo}/>}/>
-                </Routes>
-
+                <div>
+                    <Header/>
+                    <NavigationBar/>
+                    <Routes>
+                        <Route
+                            path={"/overview"}
+                            element={<TodoOverviewPage
+                                todos={todos}
+                                addTodo={addTodo}/>}
+                        />
+                    </Routes>
+                </div>
             </BrowserRouter>
 
 
