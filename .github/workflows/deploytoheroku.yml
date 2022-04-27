@@ -48,7 +48,7 @@ jobs:
     needs: build-backend
     environment:
       name: production-heroku
-      url: https://todoapp-mst1.herokuapp.com/
+      url: https://todoapp-mst2.herokuapp.com/
     env:
       HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
     steps:
@@ -60,10 +60,9 @@ jobs:
       - name: Login to Heroku
         run: heroku container:login
       - name: Push Docker Container
-        run: heroku container:push web -a todoapp-mst1
+        run: heroku container:push web -a todoapp-mst2
       - name: Release Docker Container
-        run: heroku container:release web -a todoapp-mst1
-
+        run: heroku container:release web -a todoapp-mst2
 
 
 
