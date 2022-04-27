@@ -6,7 +6,7 @@ ENV ENVIRONMENT=prod
 
 LABEL maintainer="mstuff"
 
-ADD backend/target/app.jar shopping-list-app.jar
+ADD backend/target/app.jar app.jar
 
 EXPOSE 8080
 
